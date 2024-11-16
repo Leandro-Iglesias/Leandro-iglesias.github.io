@@ -116,7 +116,7 @@ p{
     cursor: pointer;
     padding: 10px;
     list-style-type: none;
-    color:white;
+    color:#23FAEF;
 }
 
 .InformacoesPessoais li:hover {
@@ -140,8 +140,26 @@ p{
     right: 10%;
     width: 30%;
     height: 30%;
+    
 }
-
+#content #info{
+  color:#57E1FA;
+  font-size: 20px;
+}
+#content #faq{
+  font-size: 20px;
+  color: #57E1FA;
+}
 .Email{
-  color: white;
+  color: #57E1FA;
 }
+#content #copycats{
+  font-size: 20px;  
+  color:#57E1FA;
+}
+#content #Áreas_de_interesse{
+  padding: ;
+}
+#content #Áreas_de_interesse h2{
+  color:#57E1FA;
+}  
