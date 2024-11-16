@@ -8,7 +8,7 @@ body {
 p{
     color:white;
 }
-.container2{
+.container_info{
     padding-left: 2%;
     padding-top:1%;
     position: absolute;
@@ -35,14 +35,46 @@ p{
 }
 
 .container {
+  background: #1c1f2b;
     margin-top: 3%;
     margin-left: 4%;
     position: relative;
     width: 90%; /* Ajuste a largura conforme necessário */
     height: 90%; /* Ajuste a altura conforme necessário */
-    border: 1px solid transparent; /* Ajuste a cor se desejar */
+    border-radius: 10px;
   }
-  
+  @property --angle{
+    syntax: "<angle>";
+    initial-value : 0deg;
+    inherits: false;
+  }
+  .container::after, .container::before{
+
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),#1FDD94,#23C0FA,red,blue, #1FDD94);
+    top:50%;
+    left:50%;
+    translate: -50% -50%;
+    z-index: -1;  
+    padding:3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+  }
+  @keyframes spin {
+    from{
+      --angle:0deg;
+    }
+    to{--angle:360deg;
+    }
+    
+  }
+  .container::before{
+    filter:blur(1.5rem);
+    opacity:0.5;
+  }
   .line {
     position: absolute;
     background-color: #0FA4F5; /* Cor da linha */
@@ -106,4 +138,10 @@ p{
     position:absolute;
     top: 10%;
     right: 10%;
+    width: 30%;
+    height: 30%;
+}
+
+.Email{
+  color: white;
 }
